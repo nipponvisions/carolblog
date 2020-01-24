@@ -12,7 +12,7 @@
 get_header();
 ?>
 <div id="below_header">
-<!-- <div class ="notice"> <p> This is template SINGLE.PHP </p> </div>  -->
+<!-- <div class ="notice"> <p> This is template archive.php </p> </div>  -->
 	<!-- google add-->
 	<?php get_template_part('template-parts/adds/google_horizontal'); ?> 
 
