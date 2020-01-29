@@ -61,34 +61,39 @@ get_header();
 					)
 				);
 			}
+		?>
+		<ul class="attachment_meta_data">
+				<li> <?php //display image or image icon 
+			echo wp_get_attachment_image($attachment_id, $size, $icon, $attr); ?> 
+			</li>
+			
+			<li><?php	// display image or attachment  caption
+				echo '<p> caption:'. wp_get_attachment_caption($attachment_id). '</p>';   ?>  
+			</li>
+			<li> <?php 	//get attachment meta data -dimensions
+				$attachment_meta =  wp_get_attachment_metadata($attachment_id);     ?> 
+			</li>
+		</ul>
 
-
-
-	   
-		//display image or image icon 
-		echo  wp_get_attachment_image($attachment_id, $size, $icon, $attr);
-
-			// display image or attachment  caption
-		  echo ' <br>caption: '. wp_get_attachment_caption($attachment_id);
-
-
-
-
-
-
-		//get attachment meta data -dimensions
-		$attachment_meta =  wp_get_attachment_metadata($attachment_id); 
+		<?php
+	
 
 		if($attachment_meta){
 			// if meta data is availlable 
 			// uploaded  width 
-			echo '<br> width:'. 		absint($attachment_meta['width'] );
-			echo'<br> height:'. absint($attachment_meta['height'] );
-			echo '<br> File Name:'. $attachment_meta['file'];
-
+		?>
+		<ul class="attachment_meta_data">
+				<li> <?php echo 'width:'. absint($attachment_meta['width'] );  ?> </li>
+				<li> <?php echo 'height:'. absint($attachment_meta['height'] );  ?> </li>
+				<li> <?php echo 'File Name:'. $attachment_meta['file'];  ?> </li>
+				<li> <?php // display featured image description field content (Cameraman) 
+					?> <p> Photo By: <?php echo get_post(get_post_thumbnail_id())->post_content; ?> </p> 
+				</li>
+		</ul>
+		<?php
+		
 		}
-		  // display featured image description field content (Cameraman) 
-			?> <p> Photo By: <?php echo get_post(get_post_thumbnail_id())->post_content; ?> </p> <?php
+		
 
 		//Retrieves the navigation to next/previous post where image was used 
 		$args = array(
@@ -129,5 +134,4 @@ get_header();
 	</div><!--right_column -->
 	<div style="clear:both"></div>	
 </div><!--columns -->
-</div><!--content  see header -->
 <?php  get_footer(); ?>

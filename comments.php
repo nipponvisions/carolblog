@@ -34,11 +34,14 @@
 			foreach ( $comments as $comment ) {
 				echo '<p>' . $comment->comment_content . '</p>';
 				// commentor and date
-				echo '<b>'.get_comment_author() .'</b> '. get_comment_date().'<br><br>';
+				echo '<p> <b>'.get_comment_author() .'</b>'. get_comment_date().'</p> <br>';
 			}
 		}
 		else {
 			echo 'No comments found.';
 		}
+	
+		// display comments form 
+		comment_form() ;
 	?>
-</div>
+</div><!--comments -->

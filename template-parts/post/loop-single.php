@@ -1,26 +1,22 @@
 <?php
 /**
-*template name: single-loop
+*template name: loop-single
 *Description: powers the single posts
 *author: Mathenge Moses
 *theme: carolblog
 *
 **/
 ?>
-
-
-<!-- Start the Loop-single. -->
-
-<?php 
-if ( have_posts() ) : ?>
-	<div class="loop_single">
-
+<!--  Start the Loop-single.  -->
+<div class="loop_single">
+	<?php 
+	if ( have_posts() ) : ?>
 		<!-- story title -->
 		<?php the_title('<h2 class="page-title">','</h2>'); ?>
 
 		<!-- display featured image -->
 		<div class="picha_single">
-					<?php carolblog_single_post_image(); ?>
+			<?php carolblog_single_post_image(); ?>
 
 		</div><!--picha_single -->
 
@@ -30,37 +26,27 @@ if ( have_posts() ) : ?>
 		<?php 
 		while ( have_posts() ) : the_post(); ?>
 
-		<!--  display featured image description field content -->
-		<?php //echo get_post(get_post_thumbnail_id())->post_content; ?>
+			<!--  display featured image description field content -->
+			<?php //echo get_post(get_post_thumbnail_id())->post_content; ?>
+			<!-- the post body content -->
+			<div class="post_content"> 
+				<?php the_content(); ?>
+			</div><!--post_content -->
 
-
-		<!-- the post body content -->
-		<div class="post_content"> 
-			<?php    the_content(); ?>
-		</div><!--post_content -->
-
-		<!-- COMMENTS -->
-			<!-- display comments form -->
-			<?php   comment_form() ; ?>
-
-			<!--  Post Comments -->
+			<!-- COMMENTS -->
+			<!--  display Post Comments -->
 			<?php
-			// If comments are open or we have at least one comment, load up the comment template.
+			// If comments are open or we have at least one comment, 
 			if ( comments_open() || get_comments_number() ) :
+				//load up the comment template.
 				comments_template();
 			endif;
-			?>
+		endwhile; 
+		else : ?>
 
-
-		<?php 
-		endwhile; else : ?>
-
-		<!-- The very first "if" tested to see if there were any Posts to -->
-		<!-- display.  This "else" part tells what do if there weren't any. -->
-		<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
-
-		<!-- REALLY stop The Loop. -->
-	</div><!-- loop_single -->
-<?php endif; ?>
-</div>
-
+			<!-- if cooments are not open -->
+			<p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
+			<!-- REALLY stop The Loop. -->
+			<?php
+	endif; ?>
+</div><!-- loop_single -->

@@ -4,12 +4,13 @@ Theme Name: Carolblog
 Theme URI: https://wordpress.org/themes/carolblog/
 Author: Mathenge Moses
 Author URI: http://warembo.appspot.com/models.php
-Description: The Theme to Power Carolblog Website <br> it's blog-focused, and designed for two to three columns with two google adds spots and a local commercial flyer spot
+Description: The Theme to Power Carolblog Website <br> it's blog-focused, and designed for two to three columns with two google adds spots and a local commercial flyer spot.
 Tags: blog, two-columns, right-sidebar, custom-colors, custom-header, custom-logo, custom-menu, featured-images, post-formats,  threaded-comments, mobile device
 Version: 2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Use it to make something cool, have fun, and share what you've learned with others.
+@since: 2020;
 */
 
 html, body {
@@ -38,12 +39,14 @@ a{
 #main_container{
 	border:1px solid green;
 	position: relative;
-	min-height: 100%;
+	/*	min-height: 100%;*/
 	width:1050px;
 	/*width: 70%;*/
 	margin:auto;
 	padding-bottom: 110px;
+	overflow: auto;
 }
+
 #header {
 	background: #90a090;
 	border-bottom: double 3px #aba;
@@ -57,10 +60,14 @@ a{
 }
 /* header Nav */
 #header_nav{
-	background-color: #797979;
+}
+#header_nav span{
+	/* hand held devices */
+	display:none;
 }
 .menu-header-container{
 /*	border: 2px solid blue;*/
+		background-color: #797979;
 }
 .menu-header-container ul{
 	list-style: none;
@@ -80,10 +87,12 @@ a{
 
 #below_header{
 /*	border: 1px solid blue;*/
+	padding:5px;
 }
 .notice{
 	background-color:  red;
-	visibility: hidden;
+	visibility:hidden;
+	height:0;
 }
 #latest_post{
 	display: block;
@@ -129,7 +138,7 @@ a{
 
 /* social media Nav */
 #social_media{
-/*	border: 2px solid blue;*/
+	/*	border: 2px solid blue;*/
 	display: block;
 	padding-bottom: 3px;
 }
@@ -156,8 +165,8 @@ a{
 
 /* Two columns  */
 #columns{
-display: block;
-/*border:2px solid red;*/
+	display: block;
+	/*border:2px solid red;*/
 }
 .left_column{
 	float: left;
@@ -180,29 +189,23 @@ display: block;
 }
 
 .snippets{
-	/*border: 1px solid white;*/
+	border: 1px solid white;
 	/*background-color: grey; */
-	margin-bottom: 20px;
+	margin-bottom: 5px;
+	display: block;
+	padding: 3px;
+	min-height: 84px;
+	clear: both;
 }
-.picha{
-	display: inline-block;
+.snippets img{
+	float: left;
+	padding: 5px;
 	vertical-align: top;
-	max-width: 400px;
-	padding-top: 10px;
-/*	border: 1px solid white;*/
+	width: 80px;
+	height: auto;
 }
-.picha ul{
-	min-width: 400px;
-}
-.picha ul li{
-	padding: 3px;	
-}
-.picha ul li h4{
-	padding-left: 5px;	
-}
-.picha ul li p{
+.snippets p{
 	margin: 0;
-	padding-left: 5px;	
 }
 
 #flyers{
@@ -263,21 +266,50 @@ h2.page-title{
 }
 .post_content{
 	padding-left: 5px;
+	display:block;
+	border: 2px solid blue;
+	
 }
 .post_content p{
+	display: block;
+	clear:both;
 }
-#respond{
+.wp-caption-text{
+	/* for images inserted directly into the post content */
+	font-weight:bold;	
 }
-.comment-respond{
-	padding-left: 5px;
-	border: 1px solid white
-}
+/* COMMENTTS  */
 .comments{
-	padding-left: 5px;
+	padding:5px;
+	border:2px solid green;
 }
 .comments p{
-	margin: 0;
+	margin:0;
 }
+
+/* comment response  */
+.comment-respond{
+	padding-left:5px;
+}
+.comment-respond p{
+	margin: 3px;
+}
+#comment{
+	/* this is the text area */
+	max-width: 318px;
+	border:2px solid red;
+	margin-left:3px;
+}
+.form-submit{}
+/*  End comment response  */
+.comment-reply-title{}
+.comment-form{}
+.logged-in-as{}
+.comment-form-comment{}
+.comment-form-comment label{
+	display:block;
+}
+
 
 /* single post  page END */
 
@@ -320,23 +352,56 @@ h2.page-title{
 }
 
 /*  below flyer sidebar contentents styling  */
-.widget {
+/* WIDGETS */
+.widget{
 }
-.widget_recent_entries{
+.widget ul{
+	margin-left: 20px;
 }
-.widget_recent_entries ul{
-	padding: 20px;
-}
-.widget_recent_entries ul li{
-	list-style-type: disc;
-}
-.horizontal_add{
-	display: block;
-	text-align: center;
-	border: 1px solid white;
+.widget ul li{
+/* 	list-style:disc; */
 }
 
+.widget_media_gallery{
+/* see indipendent style below  immediately below */
+	}
+	#gallery-1 {
+		margin: auto;
+	}
+	#gallery-1 .gallery-item {
+		float: left;
+		margin-top: 10px;
+		text-align: center;
+		width: 33%;
+	}
+	#gallery-1 img {
+		border: 2px solid #cfcfcf;
+	}
+	#gallery-1 .gallery-caption {
+		margin-left: 2px;
+		text-align:left;
+		font-weight:normal;
+	}
+
+	/* see gallery_shortcode() in wp-includes/media.php */
+/* widget_media_gallery */
+
 /* end sidebar */
+
+/* attachment template */
+.attachment_meta_data{	
+	margin-left:5px;
+}
+.attachment_meta_data li{
+	padding-left:5px;
+}
+
+.post-navigation{
+	padding-left:10px;	
+}
+.post-edit-link{
+	padding-left:10px;
+}
 
 /* pages  */
 
@@ -352,7 +417,7 @@ h2.page-title{
 	padding-bottom: 5px;
 }
 .footer{
-/*	border:2px solid blue;*/
+	border:2px solid blue;
 	background-color:#768676;
 	display: flex;
 	justify-content: center;
@@ -376,16 +441,23 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 .aligncenter {display: block; margin-left: auto; margin-right: auto}
 
 
+
+
+
 /* Hand held Devices media querry */
-@media only screen and (max-width: 600px) {
-	/* galaxy s7 and up  anything below 600px */
+@media only screen and (width:375px){
+	/* Apple iPhone 6, 6S, 7, 8, X  width= 375px   */
+	body{
+		max-width: 375px;
+	}
 	div,ul,li {
-		max-width: 390px;
+		max-width: 375px;
 	}
 	#main_container{
 		display:block;
-		/* background-color:pink; */
+		 background-color:pink; 
 		margin:auto;
+		padding-bottom: 400px; /* change this with change in footer content */
 	}
 	#header {
 		padding: 5px 5px 5px 10px;
@@ -393,61 +465,363 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 	.header_description h2{
 		font-size:larger;
 	}
+	
+	/* hand held header nav */
+	#header_nav{
+	}
+	#header_nav span{
+		display:inline-block;
+		background-color: white;
+		border-radius: 40px;
+		padding: 3px;
+	}
+	.menu-header-container{
+		/* 	border: 2px solid blue; */
+		display: inline-block;	
+		visibility: hidden;
+		position: absolute;
+		z-index: 1;
+	}
+	#menu-header.menu{
+		list-style: none;
+	}
+	#menu-header.menu li{
+		display:block;
+		border-left:3px solid black;
+		padding: 3px;
+	}
+	#menu-header.menu li a{
+		font-weight: bold;
+	}
+	#header_nav:hover .menu-header-container{
+		visibility:visible;
+	}
 	.left_column{
 		display: block;
 		width: 100%;
 	}
 
+	/*latest Post */
+	.latest_post h2{}
+	img{
+		/* max body -4px */
+		max-width:370px;
+		height:auto
+	}
+	.caption{
+		padding-left: 3px;
+	}
+	.latest_post_excerpt{
+		max-width:42px;
+	}
+
+	/* single post */
+	.picha_single_flame{
+		/* max body -2px */
+		max-width: 373px;
+	}
+	.post_content img{
+	/* image inserted directly into the post text */
+	max-width: 180px;
+	}
+
+	#comment{
+		/* this is the text area */
+		max-width: 390px;
+		border:2px solid red;
+		margin-left:3px;
+	}
 	/*  right column */
 	.right_column{
 		float: none;
 		width:100%;
 	}
-	.latest_post h2{
+		.widget_search{
 	}
+	#s{
+		width:125px;
+	}
+	/* disable verticle add  */
+	.verticle_add{
+		visibility:hidden;
+		width:0;
+		height:0;
+	}
+	#footer{
+		width: 100%;
+		height:400px; /* change this with change in footer content */
+		bottom: 0;
+		padding-bottom: 5px;
+	}
+	.footer{
+		/*	border:2px solid blue;*/
+		background-color:#768676;
+		display:block;
+		padding:10px 0 10px 0;
+	}
+	.footer_box{
+		border: 1px solid white;
+		/* 	padding: 16px; */
+		max-width: 100%;
+		margin:10px;
+		padding:0;
+	}
+}
+
+
+@media only screen and (width:414px){
+		/* Apple iPhone 6+, 6s+, 7+, 8+, XR, XSMax   width =414px */
+	body{
+		max-width: 414px;
+	}
+	div,ul,li {
+		max-width: 414px;
+	}
+	#main_container{
+		display:block;
+		 background-color:pink; 
+		margin:auto;
+		padding-bottom: 400px; /* change this with change in footer content */
+	}
+	#header {
+		padding: 5px 5px 5px 10px;
+	}
+	.header_description h2{
+		font-size:larger;
+	}
+	
+	/* hand held header nav */
+	#header_nav{
+	}
+	#header_nav span{
+		display:inline-block;
+		background-color: white;
+		border-radius: 40px;
+		padding: 3px;
+	}
+	.menu-header-container{
+		/* 	border: 2px solid blue; */
+		display: inline-block;	
+		visibility: hidden;
+		position: absolute;
+		z-index: 1;
+	}
+	#menu-header.menu{
+		list-style: none;
+	}
+	#menu-header.menu li{
+		display:block;
+		border-left:3px solid black;
+		padding: 3px;
+	}
+	#menu-header.menu li a{
+		font-weight: bold;
+	}
+	#header_nav:hover .menu-header-container{
+		visibility:visible;
+	}
+	.left_column{
+		display: block;
+		width: 100%;
+	}
+
+	/*latest Post */
+	.latest_post h2{}
 	img{
-		max-width:320px;
+		/* max body -4px */
+		max-width:410px; 
 		height:auto
 	}
-	.single{
-		border:1px solid blue;
-	}
 	.caption{
-		padding-left:3px;
+		padding-left: 3px;
 	}
 	.latest_post_excerpt{
-		max-width:318px;
-	}
-	.picha{
-		display: inline-block;
-		vertical-align: top;
-		max-width: 380px;
-		padding-top: 10px;
-		border: 1px solid white;	
-	}
-	.picha ul{
+		max-width:410px;
 	}
 
 	/* single post */
 	.picha_single_flame{
-		max-width: 318px;
+		/* max body -2px */
+		max-width: 412px;
 	}
 	.picha_single_flame img{
-		max-width: 318px;
+	max-width: 410px;
+	border: 3px solid grey;
+/*	height: auto;*/
+}
+
+	.post_content img{
+	/* image inserted directly into the post text */
+	max-width: 180px;
 	}
-	#comment{}
-	.comment-form-comment{}
-	.comment-form-comment label{
-		display: block;
-	}
+
 	#comment{
-		max-width: 318px;
+		/* this is the text area */
+		max-width: 390px;
+		border:2px solid red;
+		margin-left:3px;
 	}
-	.verticle_add img{
-	max-height: 200px;
-	width: auto;
+	/*  right column */
+	.right_column{
+		float: none;
+		width:100%;
+	}
+		.widget_search{
+	}
+	#s{
+		width:125px;
+	}
+	/* disable verticle add  */
+	.verticle_add{
+		visibility:hidden;
+		width:0;
+		height:0;
+	}
+	#footer{
+		width: 100%;
+		height:400px; /* change this with change in footer content */
+		bottom: 0;
+		padding-bottom: 5px;
 	}
 	.footer{
+		/*	border:2px solid blue;*/
+		background-color:#768676;
+		display:block;
+		padding:10px 0 10px 0;
+	}
+	.footer_box{
+		border: 1px solid white;
+		/* 	padding: 16px; */
+		max-width: 100%;
+		margin:10px;
+		padding:0;
+	}
+}
+
+/* Hand held Devices media querry */
+@media only screen and (max-width: 360px) {
+	/* Sumsang Galaxy s7 and up  anything below 360px */
+	/* Also LG3, LG4, LG5, LG Nexus 5, */ 
+	body{
+		max-width: 360px;
+	}
+	div,ul,li {
+		max-width: 360px;
+	}
+	#main_container{
+		display:block;
+		background-color:pink;
+		margin:auto;
+		padding-bottom: 400px; /* change this with change in footer content */
+	}
+	#header {
+		display:block;
+		padding: 5px 5px 5px 10px;
+	}
+	.header_description h2{
+		font-size:larger;
+	}
+
+	/* hand held header nav */
+	#header_nav{
+	}
+	#header_nav span{
+		display:inline-block;
+		background-color: white;
+		border-radius: 40px;
+		padding: 3px;
+	}
+	.menu-header-container{
+		/* 	border: 2px solid blue; */
+		display: inline-block;	
+		visibility: hidden;
+		position: absolute;
+		z-index: 1;
+	}
+	#menu-header.menu{
+		list-style: none;
+	}
+	#menu-header.menu li{
+		display:block;
+		border-left:3px solid black;
+		padding: 3px;
+	}
+	#menu-header.menu li a{
+		font-weight: bold;
+	}
+	#header_nav:hover .menu-header-container{
+		visibility:visible;
+	}
+
+	.left_column{
 		display: block;
+		width: 100%;
+	}
+	
+	/* latest post */
+	.latest_post h2{}
+	img{
+		max-width:356px;
+		height:auto;
+	}
+	.caption{
+		padding-left:3px;
+	}
+		.latest_post_excerpt{
+		max-width:358px;
+	}
+
+	/* single post */
+	.picha_single_flame{
+		max-width: 358px;
+	}
+	.picha_single_flame img{
+		max-width:358px;
+		height:auto;
+	}
+	.post_content img{
+	/* image inserted directly into the post text */
+	max-width: 180px;
+	}
+	#comment{
+	/* this is the text area */
+	max-width: 318px;
+	border:2px solid red;
+	margin-left:3px;
+	}
+	/*  right column */
+	.right_column{
+		float: none;
+		width:100%;
+	}
+	.widget_search{
+	}
+	#s{
+		width:125px;
+	}
+	/* disable verticle add  */
+	.verticle_add{
+		visibility:hidden;
+		width:0;
+		height:0;
+	}
+	#footer{
+		width: 100%;
+		height:400px; /* change this with change in footer content */
+		bottom: 0;
+		padding-bottom: 5px;
+	}
+	.footer{
+		/*	border:2px solid blue;*/
+		background-color:#768676;
+		display:block;
+		padding:10px 0 10px 0;
+	}
+	.footer_box{
+		border: 1px solid white;
+		/* 	padding: 16px; */
+		max-width: 100%;
+		margin:10px;
+		padding:0;
 	}
 }

@@ -13,10 +13,7 @@
 get_header();
 ?>
 <div id="below_header">
-<!-- <div class ="notice"> <p> This is template SINGLE.PHP </p> </div>  -->
-	<!-- google add-->
 	<?php get_template_part('template-parts/adds/google_horizontal'); ?> 
-
 	 <div>  <?php get_search_form(); ?> </div> 
 </div><!--below_header-->
 
@@ -40,5 +37,5 @@ get_header();
 	</div><!--right_column -->
 	<div style="clear:both"></div>	
 </div><!--columns -->
-</div><!--content  see header -->
+
 <?php get_footer(); ?>

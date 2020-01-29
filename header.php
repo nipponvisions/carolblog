@@ -50,8 +50,9 @@
             </div><!-- headerimage --> 
 
               <div id="header_nav">
-					<?php wp_nav_menu('header');  ?>
-					</div>
+                    <span> Menu </span>
+				<?php wp_nav_menu('header');  ?>
+			</div>
 
             </div><!--header -->
 

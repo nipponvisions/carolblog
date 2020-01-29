@@ -14,8 +14,6 @@
 <div class="sidebar">
 	<!-- 	<p> Sidebar Template </p> -->
 	<ul>
-
-
 		<?php
 		if ( is_active_sidebar('mainsidebar') ){
 			dynamic_sidebar('mainsidebar'); 

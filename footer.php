@@ -11,8 +11,9 @@
 * 
 **/
 ?>
-            <div id="footer">
-            	<div class='footer'> 
+			</div><!--content  see header -->
+            <div id="footer" class="footer">
+            	
 					<div class='footer_box'>
 					
 
@@ -46,8 +47,7 @@
 					 <div class='footer_box'>
 					 	related documents
 					 </div> 
-				</div>
-          	</div>           
+          	</div><!--footer -->          
         </div> <!-- main_container -->
        <?php wp_footer(); ?>
     </body>
