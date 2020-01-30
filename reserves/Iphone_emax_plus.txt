@@ -1,0 +1,121 @@
+
+@media only screen and (max-width: 414px) {
+/* Apple iPhone 6+, 6s+, 7+, 8+, XR, XSMax   width =414px */
+	body{
+		max-width: 414px;
+	}
+	div,ul,li {
+		max-width: 414px;
+	}
+	#main_container{
+		display:block;
+		background-color:yellow;
+		margin:auto;
+		padding-bottom: 400px; /* change this with change in footer content */
+	}
+	#header {
+		display:block;
+		padding: 5px 5px 5px 10px;
+	}
+	.header_description h2{
+		font-size:larger;
+	}
+
+	/* hand held header nav */
+	#header_nav{
+	}
+	#header_nav span{
+		display:inline-block;
+		background-color: white;
+		border-radius: 40px;
+		padding: 3px;
+	}
+	.menu-header-container{
+		/* 	border: 2px solid blue; */
+		display: inline-block;	
+		visibility: hidden;
+		position: absolute;
+		z-index: 1;
+	}
+	#menu-header.menu{
+		list-style: none;
+	}
+	#menu-header.menu li{
+		display:block;
+		border-left:3px solid black;
+		padding: 3px;
+	}
+	#menu-header.menu li a{
+		font-weight: bold;
+	}
+	#header_nav:hover .menu-header-container{
+		visibility:visible;
+	}
+
+	.left_column{
+		display: block;
+		width: 100%;
+	}
+	
+	/* latest post */
+	.latest_post h2{}
+	img{
+		max-width:410px;
+		height:auto;
+	}
+	.caption{
+		padding-left:3px;
+	}
+		.latest_post_excerpt{
+		max-width:412px;
+	}
+
+	/* single post */
+	.picha_single_flame{
+		max-width: 412px;
+	}
+	.picha_single_flame img{
+		max-width:412px;
+		height:auto;
+	}
+	.post_content img{
+	/* image inserted directly into the post text */
+	max-width: 180px;
+	}
+	#comment{
+	/* this is the text area */
+	max-width: 318px;
+	border:2px solid red;
+	margin-left:3px;
+	}
+	/*  right column */
+	.right_column{
+		float: none;
+		width:100%;
+	}
+	.widget_search{
+	}
+	#s{
+		width:125px;
+	}
+	/* disable verticle add  */
+	.verticle_add{
+		display: none;
+	
+	}
+		#footer{
+		height:400px; /* change this with change in footer content */
+		display: block;
+		width: 100%;
+	}
+	.footer{
+	}
+
+	.footer_box{
+		border: 1px solid white;
+		/* 	padding: 16px; */
+		max-width: 100%;
+		margin:10px;
+		padding:0;
+	}
+}

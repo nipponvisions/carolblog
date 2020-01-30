@@ -11,7 +11,7 @@
 * 
 **/
 ?>
-			</div><!--content  see header -->
+		</div><!--content  see header -->
             <div id="footer" class="footer">
             	
 					<div class='footer_box'>

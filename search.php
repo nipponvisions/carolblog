@@ -41,5 +41,5 @@ get_header();
 	</div><!--right_column -->
 	<div style="clear:both"></div>	
 </div><!--columns -->
-</div><!--content  see header -->
+
 <?php get_footer(); ?>
