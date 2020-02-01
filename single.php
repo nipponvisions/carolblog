@@ -18,7 +18,7 @@ get_header();
 
 <div id="columns">
 	<div class="left_column">
-		<?php get_template_part('template-parts/page/loop','page'); ?> 
+		<?php get_template_part('template-parts/post/loop-single','post'); ?> 
 	</div>
 
 

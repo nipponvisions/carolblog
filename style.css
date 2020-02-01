@@ -11,6 +11,7 @@ License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Use it to make something cool, have fun, and share what you've learned with others.
 @since: 2020;
+@link https://mediag.com/blog/popular-screen-resolutions-designing-for-all/
 */
 
 html, body {
@@ -91,18 +92,25 @@ a{
 /*	border: 1px solid blue;*/
 	padding:5px;
 }
+.horizontal_add{
+	text-align: center;
+}
+.horizontal_add img{
+}
+
 .notice{
 	background-color:  red;
 	visibility:hidden;
 	height:0;
 }
 #latest_post{
-	display: block;
+
 }
 .latest_post{
 /*	border: 1px solid blue;*/
 	background-color: #b5b4b1;
 	border:1px solid white;
+	display: block;
 }
 .latest_post_wrapper{
 	margin: auto;
@@ -212,10 +220,11 @@ a{
 }
 
 #flyers{
-	display: block;
+
 }
 .flyers{
 	text-align: center;
+	display: block;
 }
 #below_flyer{
 	display: flex;
@@ -379,6 +388,8 @@ h2.page-title{
 	}
 	#gallery-1 img {
 		border: 2px solid #cfcfcf;
+		max-width: 80px;
+		height: auto;
 	}
 	#gallery-1 .gallery-caption {
 		margin-left: 2px;
