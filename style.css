@@ -424,13 +424,14 @@ h2.page-title{
 }
 
 #footer{
+
+}
+.footer{
 	height: 100px;
 	width: 100%;
 	bottom: 0;
 	position: absolute;
 	padding-bottom: 5px;
-}
-.footer{
 	border:2px solid blue;
 	background-color:#768676;
 	display: flex;
@@ -455,253 +456,11 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 .aligncenter {display: block; margin-left: auto; margin-right: auto}
 
 
-
-@media only screen and (max-width:375px){
-	/* Apple iPhone 6, 6S, 7, 8, X  width= 375px   */
-	body{
-		max-width: 375px;
-	}
-	div,ul,li {
-		max-width: 375px;
-	}
-	#main_container{
-		display:block;
-		 background-color:green; 
-		margin:auto;
-		padding-bottom: 400px; /* change this with change in footer content */
-	}
-	#header {
-		padding: 5px 5px 5px 10px;
-	}
-	.header_description h2{
-		font-size:larger;
-	}
-	
-	/* hand held header nav */
-	#header_nav{
-	}
-	#header_nav span{
-		display:inline-block;
-		background-color: white;
-		border-radius: 40px;
-		padding: 3px;
-	}
-	.menu-header-container{
-		/* 	border: 2px solid blue; */
-		display: inline-block;	
-		visibility: hidden;
-		position: absolute;
-		z-index: 1;
-	}
-	#menu-header.menu{
-		list-style: none;
-	}
-	#menu-header.menu li{
-		display:block;
-		border-left:3px solid black;
-		padding: 3px;
-	}
-	#menu-header.menu li a{
-		font-weight: bold;
-	}
-	#header_nav:hover .menu-header-container{
-		visibility:visible;
-	}
-	.left_column{
-		display: block;
-		width: 100%;
-	}
-
-	/*latest Post */
-	.latest_post h2{}
-
-	img{
-		/* max body -4px */
-		max-width:370px;
-		height:auto
-	}
-	.caption{
-		padding-left: 3px;
-	}
-	.latest_post_excerpt{
-		max-width:370px;
-	}
-
-	/* single post */
-	.picha_single_flame{
-		/* max body -2px */
-		max-width: 373px;
-	}
-	.post_content img{
-	/* image inserted directly into the post text */
-	max-width: 180px;
-	}
-
-	#comment{
-		/* this is the text area */
-		max-width: 370px;
-		border:2px solid red;
-		margin-left:3px;
-	}
-	/*  right column */
-	.right_column{
-		float: none;
-		width:100%;
-	}
-		.widget_search{
-	}
-	#s{
-		width:125px;
-	}
-	/* disable verticle add  */
-	.verticle_add{
-		visibility:hidden;
-		width:0;
-		height:0;
-	}
-	#footer{
-		height:400px; /* change this with change in footer content */
-		display: block;
-		width: 100%;
-	}
-	.footer{
-	}
-	.footer_box{
-		border: 1px solid white;
-		/* 	padding: 16px; */
-		max-width: 100%;
-		margin:10px;
-		padding:0;
-	}
-}
-
-@media only screen and (max-width: 360px) {
-	/* Sumsang Galaxy s7 and up  anything below 360px */
-	/* Also LG3, LG4, LG5, LG Nexus 5, */ 
-	body{
-		max-width: 360px;
-	}
-	div,ul,li {
-		max-width: 360px;
-	}
-	#main_container{
-		display:block;
-		background-color:pink;
-		margin:auto;
-		padding-bottom: 400px; /* change this with change in footer content */
-	}
-	#header {
-		display:block;
-		padding: 5px 5px 5px 10px;
-	}
-	.header_description h2{
-		font-size:larger;
-	}
-
-	/* hand held header nav */
-	#header_nav{
-	}
-	#header_nav span{
-		display:inline-block;
-		background-color: white;
-		border-radius: 40px;
-		padding: 3px;
-	}
-	.menu-header-container{
-		/* 	border: 2px solid blue; */
-		display: inline-block;	
-		visibility: hidden;
-		position: absolute;
-		z-index: 1;
-	}
-	#menu-header.menu{
-		list-style: none;
-	}
-	#menu-header.menu li{
-		display:block;
-		border-left:3px solid black;
-		padding: 3px;
-	}
-	#menu-header.menu li a{
-		font-weight: bold;
-	}
-	#header_nav:hover .menu-header-container{
-		visibility:visible;
-	}
-
-	.left_column{
-		display: block;
-		width: 100%;
-	}
-	
-	/* latest post */
-	.latest_post h2{}
-	img{
-		max-width:356px;
-		height:auto;
-	}
-	.caption{
-		padding-left:3px;
-	}
-		.latest_post_excerpt{
-		max-width:358px;
-	}
-
-	/* single post */
-	.picha_single_flame{
-		max-width: 358px;
-	}
-	.picha_single_flame img{
-		max-width:358px;
-		height:auto;
-	}
-	.post_content img{
-	/* image inserted directly into the post text */
-	max-width: 180px;
-	}
-	#comment{
-	/* this is the text area */
-	max-width: 318px;
-	border:2px solid red;
-	margin-left:3px;
-	}
-	/*  right column */
-	.right_column{
-		float: none;
-		width:100%;
-	}
-	.widget_search{
-	}
-	#s{
-		width:125px;
-	}
-	/* disable verticle add  */
-	.verticle_add{
-/*		visibility:hidden;
-		width:0;
-		height:0;*/
-		display: none;
-	}
-	#footer{
-		height:400px; /* change this with change in footer content */
-		display: block;
-		width: 100%;
-	}
-	.footer{
-	}
-	.footer_box{
-		border: 1px solid white;
-		/* 	padding: 16px; */
-		max-width: 100%;
-		margin:10px;
-		padding:0;
-	}
-}
-
 @media only screen and (max-width: 414px) {
 /* Apple iPhone 6+, 6s+, 7+, 8+, XR, XSMax   width =414px */
-	body{
+	html,body{
 		max-width: 414px;
+		font-size:20px;
 	}
 	div,ul,li {
 		max-width: 414px;
@@ -803,13 +562,268 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 	
 	}
 		#footer{
+
+	}
+	.footer{
 		height:400px; /* change this with change in footer content */
 		display: block;
 		width: 100%;
 	}
-	.footer{
+
+	.footer_box{
+		border: 1px solid white;
+		/* 	padding: 16px; */
+		max-width: 100%;
+		margin:10px;
+		padding:0;
+	}
+}
+
+
+
+@media only screen and (max-width:375px){
+	/* Apple iPhone 6, 6S, 7, 8, X  width= 375px   */
+	html,body{
+		max-width: 375px;
+		font-size:22px;
+	}
+	div,ul,li {
+		max-width: 375px;
+	}
+	#main_container{
+		display:block;
+		 background-color:green; 
+		margin:auto;
+		padding-bottom: 400px; /* change this with change in footer content */
 	}
 
+	#header {
+		padding: 5px 5px 5px 10px;
+	}
+	.header_description h2{
+		font-size:larger;
+	}
+	
+	/* hand held header nav */
+	#header_nav{
+	}
+	#header_nav span{
+		display:inline-block;
+		background-color: white;
+		border-radius: 40px;
+		padding: 3px;
+	}
+	.menu-header-container{
+		/* 	border: 2px solid blue; */
+		display: inline-block;	
+		visibility: hidden;
+		position: absolute;
+		z-index: 1;
+	}
+	#menu-header.menu{
+		list-style: none;
+	}
+	#menu-header.menu li{
+		display:block;
+		border-left:3px solid black;
+		padding: 3px;
+	}
+	#menu-header.menu li a{
+		font-weight: bold;
+	}
+	#header_nav:hover .menu-header-container{
+		visibility:visible;
+	}
+	.left_column{
+		display: block;
+		width: 100%;
+	}
+
+	/*latest Post */
+	.latest_post h2{}
+
+	img{
+		/* max body -4px */
+		max-width:370px;
+		height:auto
+	}
+	.caption{
+		padding-left: 3px;
+	}
+	.latest_post_excerpt{
+		max-width:370px;
+	}
+
+	/* single post */
+	.picha_single_flame{
+		/* max body -2px */
+		max-width: 373px;
+	}
+		.picha_single_flame img{
+		/* max body -2px */
+		max-width: 373px;
+	}
+	.post_content img{
+	/* image inserted directly into the post text */
+	max-width: 180px;
+	}
+
+	#comment{
+		/* this is the text area */
+		max-width: 370px;
+		border:2px solid red;
+		margin-left:3px;
+	}
+	/*  right column */
+	.right_column{
+		float: none;
+		width:100%;
+	}
+		.widget_search{
+	}
+	#s{
+		width:125px;
+	}
+	/* disable verticle add  */
+	.verticle_add{
+		visibility:hidden;
+		width:0;
+		height:0;
+	}
+	#footer{
+	
+	}
+	.footer{
+		height:400px; /* change this with change in footer content */
+		display: block;
+		width: 100%;
+	}
+	.footer_box{
+		border: 1px solid white;
+		/* 	padding: 16px; */
+		max-width: 100%;
+		margin:10px;
+		padding:0;
+	}
+}
+
+@media only screen and (max-width: 360px) {
+	/* Sumsang Galaxy s7 and up  anything below 360px */
+	/* Also LG3, LG4, LG5, LG Nexus 5, */ 
+	html,body{
+		max-width: 360px;
+		font-size:20px;
+	}
+	div,ul,li {
+		max-width: 360px;
+	}
+	#main_container{
+		display:block;
+		background-color:pink;
+		margin:auto;
+		padding-bottom: 400px; /* change this with change in footer content */
+	}
+	#header {
+		display:block;
+		padding: 5px 5px 5px 10px;
+	}
+	.header_description h2{
+		font-size:larger;
+	}
+
+	/* hand held header nav */
+	#header_nav{
+	}
+	#header_nav span{
+		display:inline-block;
+		background-color: white;
+		border-radius: 40px;
+		padding: 3px;
+	}
+	.menu-header-container{
+		/* 	border: 2px solid blue; */
+		display: inline-block;	
+		visibility: hidden;
+		position: absolute;
+		z-index: 1;
+	}
+	#menu-header.menu{
+		list-style: none;
+	}
+	#menu-header.menu li{
+		display:block;
+		border-left:3px solid black;
+		padding: 3px;
+	}
+	#menu-header.menu li a{
+		font-weight: bold;
+	}
+	#header_nav:hover .menu-header-container{
+		visibility:visible;
+	}
+
+	.left_column{
+		display: block;
+		width: 100%;
+	}
+	
+	/* latest post */
+	.latest_post h2{}
+	img{
+		max-width:356px;
+		height:auto;
+	}
+	.caption{
+		padding-left:3px;
+	}
+		.latest_post_excerpt{
+		max-width:358px;
+	}
+
+	/* single post */
+	.picha_single_flame{
+		max-width: 358px;
+	}
+	.picha_single_flame img{
+		max-width:358px;
+		height:auto;
+	}
+	.post_content img{
+	/* image inserted directly into the post text */
+	max-width: 180px;
+	}
+	#comment{
+	/* this is the text area */
+	max-width: 318px;
+	border:2px solid red;
+	margin-left:3px;
+	}
+	/*  right column */
+	.right_column{
+		float: none;
+		width:100%;
+	}
+	.widget_search{
+	}
+	#s{
+		width:125px;
+	}
+	
+	/* disable verticle add  */
+	.verticle_add{
+		/*		visibility:hidden;
+		width:0;
+		height:0;*/
+		display: none;
+	}
+	#footer{
+	
+	}
+	.footer{
+		height:400px; /* change this with change in footer content */
+		display: block;
+		width: 100%;
+	}
 	.footer_box{
 		border: 1px solid white;
 		/* 	padding: 16px; */

@@ -38,7 +38,7 @@
 			}
 		}
 		else {
-			echo 'No comments found.';
+			echo '<p> No comments found.</p>';
 		}
 	
 		// display comments form 
