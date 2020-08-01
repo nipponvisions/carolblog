@@ -3,7 +3,6 @@
  * Template name: functions
  * Description: used to call WordPress functions and to define themes own functions.
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
  * @package WordPress
  * @subpackage carolblog
  * @since 
@@ -33,7 +32,7 @@ if ( ! function_exists('wp_body_open')){
 // Featured Images & Post Thumbnails
 function carolblog_custom_image_sizes() {
 	add_theme_support( 'post-thumbnails' );
-	add_image_size(  'latest_post', 400, 400); // 400pixels  max latest post image
+	add_image_size(  'latest_post', 400,400); // 400pixels  max latest post image
 	add_image_size( 'homepage_thumb', 220, 180, true ); // (cropped)
 }
 add_action( 'after_setup_theme', 'carolblog_custom_image_sizes' );
@@ -42,8 +41,7 @@ add_action( 'after_setup_theme', 'carolblog_custom_image_sizes' );
 //change the default excerpt length.
 function carolblog_custom_excerpt_length() {
 	// trim to 20 words
-	if(! has_excerpt())
-	{
+	if(! has_excerpt()){
 		return 20;
 	}
 }
@@ -79,7 +77,7 @@ function carolblog_add_sidebars(){
 }
 add_action('widgets_init','carolblog_add_sidebars');
 
-// Header immage support
+// header immage support
 	$args = array(
 		'width'         => 1048,
 		'height'        => 90,
@@ -90,14 +88,15 @@ add_theme_support( 'custom-header', $args );
 // single post image
 function carolblog_single_post_image(){
 	/**
-	* single post image dimention
-	* single post opening markup
-	* single post caption and photo credits
-	* single post closing markup
+		* single post image dimention
+		* single post opening markup
+		* single post caption and photo credits
+		* single post closing markup
 	**/
 	
 	if(has_post_thumbnail()){
 		// in case of smaller sized post thumbnail images, make the caption & exerpt width same as the image
+		// The image mustnot exceed 600 x600 in the settings
 		$single_post_thumbnail = wp_get_attachment_image_src(get_post_thumbnail_id(),'large');
 		$single_post_thumbnail_width = $single_post_thumbnail[1].'px';
 		// $latest_post_thumbnail_height = $latest_post_thumbnail[2].'px';
@@ -116,7 +115,6 @@ function carolblog_single_post_image(){
 	}
 }
 do_action('init','carolblog_single_post_image');
-
 
 // latest_post hook
 function carolblog_latest_post(){
@@ -151,19 +149,18 @@ function carolblog_latest_post(){
 			$latest_post_thumbnail_width = $latest_post_thumbnail[1].'px';
 			// $latest_post_thumbnail_height = $latest_post_thumbnail[2].'px';
 			?>
-
 			<div class="latest_post_caption" style=" width: <?php echo $latest_post_thumbnail_width; ?>;">
 				<p> <?php the_post_thumbnail_caption(); ?> </p>
 			</div>
-
 			<div class="latest_post_excerpt" style=" width: <?php echo $latest_post_thumbnail_width; ?>; ">
 				<?php
-				# display mannually inserted excerpt
-				if(has_excerpt()){ 
-					echo get_the_excerpt($post) ; 
+				//Excerpt
+				if(has_excerpt()){
+					# display mannually inserted excerpt
+					echo get_the_excerpt($post);
 				}
 				else {
-					// display auto generated excerpt for the latest post
+					# display auto generated excerpt for the latest post
 					$args = array(
 						'numberposts' =>1
 					);
@@ -173,21 +170,17 @@ function carolblog_latest_post(){
 						# code...
 						$post_content =  $key['post_content'];
 						$latest_post_excerpt = wp_trim_words( $post_content, 20); ?>
-
-						<?php  echo $latest_post_excerpt; ?>
-						<!-- add  readmore to the latest post exerpt  -->
-						<a href="<?php echo get_permalink($post->ID); ?> "> soma hapa </a>
-						<?php	
+						 <p>
+							 <?php  echo $latest_post_excerpt;?> 
+							<!-- add  readmore to the latest post exerpt  -->
+						 	<a href="<?php echo get_permalink($post->ID); ?>">soma hapa </a>
+						</p>
+					<?php	
 					}
 				}?>
 			</div><!--latest_post_excerpt -->
 		</div><!--latest_post_wrapper -->
-	</div><!--latest_post -->
-
-		
+	</div><!--latest_post -->	
 <?php
 }
 do_action('init','carolblog_latest_post');
-
-
-

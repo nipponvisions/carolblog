@@ -12,6 +12,7 @@
 **/
 get_header();
 ?>
+<div class="notice"> <?php global $template; echo basename($template); ?> </div> 
 <div id="below_header">
 	<?php get_template_part('template-parts/adds/google_horizontal'); ?> 
 	 <div>  <?php get_search_form(); ?> </div> 

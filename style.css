@@ -14,19 +14,17 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @link https://mediag.com/blog/popular-screen-resolutions-designing-for-all/
 */
 
-html, body {
+body {
 	margin:0;
 	padding:0;
 	height:100%;
 	background-color:#d6d6d6;
 }
-
-h1,h2, h3, h4, ul,li {
+h1,h2, h3, h4, ul,li,a,span {
 	margin: 0;
 	padding:0;
 	list-style: none;
 }
-
 h2,h3,h4 {
 	text-decoration-color:black;
 	color: black;
@@ -37,6 +35,10 @@ div,li {
 a{
 	text-decoration: none;
 }
+p{
+	font-size:16px;
+}
+
 #main_container{
 	border:1px solid green;
 	position: relative;
@@ -48,7 +50,7 @@ a{
 	overflow: auto;
 }
 
-#header {
+#header.header {
 	background: #90a090;
 	border-bottom: double 3px #aba;
 	border-left: solid 1px #9a9;
@@ -57,20 +59,29 @@ a{
 	/*	font: italic normal 230% 'Times New Roman', Times, serif;*/
 	letter-spacing: 0.2em;
 	margin: 0;
-	padding: 15px 10px 15px 30px;
+	padding: 15px 10px 15px 5px;
 }
+.headerimage h1{	
+}
+.header_description{
+}
+.header_description h2{
+
+}
+
 /* header Nav */
-#header_nav{
+
+.header_nav{
 }
-#header_nav span{
+.header_nav span{
 	/* hand held devices */
 	display:none;
 	font-weight:bold;
 }
 
 .menu-header-container{
-/*	border: 2px solid blue;*/
-		background-color: #797979;
+	/*	border: 2px solid blue;*/
+	background-color: #797979;
 }
 .menu-header-container ul{
 	list-style: none;
@@ -85,11 +96,13 @@ a{
 }
 
 /* content starts here */
-#content{ /* site content */
+#content.content{
+ /* site content */
+ margin-bottom: 10px;
 }
 
 #below_header{
-/*	border: 1px solid blue;*/
+	/*	border: 1px solid blue;*/
 	padding:5px;
 }
 .horizontal_add{
@@ -97,24 +110,24 @@ a{
 }
 .horizontal_add img{
 }
-
 .notice{
-	background-color:  red;
-	visibility:hidden;
-	height:0;
+	    background-color: red;
+/*	visibility:hidden;*/
+/*	height:0;*/
+	display: block;
 }
 #latest_post{
 
 }
 .latest_post{
-/*	border: 1px solid blue;*/
+	/*	border: 1px solid blue;*/
 	background-color: #b5b4b1;
-	border:1px solid white;
+/* 	border:1px solid white; */
 	display: block;
 }
 .latest_post_wrapper{
 	margin: auto;
-/*	border: 1px solid white;*/
+	/*	border: 1px solid white;*/
 	width: 450px;
 	padding-top: 5px;
 }
@@ -123,13 +136,13 @@ a{
 	text-decoration:none;
 }
 .latest_post_img{
-/*	border: 1px solid white;*/
+	/*	border: 1px solid white;*/
 	padding-left: 5px;
 }
 .latest_post_caption{
 	/*see in-line */
 	padding-left: 5px;
-/*	border:1px solid white;*/
+	/*	border:1px solid white;*/
 }
 .latest_post_caption p{
 	font-weight: bold;
@@ -138,7 +151,7 @@ a{
 }
 .latest_post_excerpt{
 	/*see in-line */
-/*	border:1px solid white;*/
+	/*	border:1px solid white;*/
 	padding: 5px;
 	max-width: 400px;
 }
@@ -163,8 +176,8 @@ a{
 	padding: 2px;
 }
 .social_media li{
-		display: inline;
-		padding-left: 5px;
+	display: inline;
+	padding-left: 5px;
 }
 .social_media li a{
 	text-decoration: none;
@@ -176,7 +189,7 @@ a{
 /* Two columns  */
 #columns{
 	display: block;
-	border:2px solid red;
+/* 	border:2px solid red; */
 }
 .left_column{
 	float: left;
@@ -187,7 +200,7 @@ a{
 /*  right column */
 .right_column{
 	float: right;
-	border: 1px solid white;
+/* 	border: 1px solid white; */
 	width: 38%;
 	margin-bottom:10px;
 }
@@ -200,7 +213,7 @@ a{
 }
 
 .snippets{
-	border: 1px solid white;
+/* 	border: 1px solid white; */
 	/*background-color: grey; */
 	margin-bottom: 5px;
 	display: block;
@@ -225,6 +238,7 @@ a{
 .flyers{
 	text-align: center;
 	display: block;
+	padding: 5px;
 }
 #below_flyer{
 	display: flex;
@@ -232,9 +246,9 @@ a{
 .sidebar{
 	display: block;
 	padding-left: 3px;
-	/*    border: 2px solid blue;*/
-    min-width: 70%;
-     max-width: 80%;
+
+	min-width: 70%;
+	max-width: 80%;
 }
 .verticle_add{
 	/*	float: right;*/
@@ -259,7 +273,7 @@ h2.page-title{
 .picha_single_flame img{
 	max-width: 620px;
 	border: 3px solid grey;
-/*	height: auto;*/
+	/*	height: auto;*/
 }
 .picha_single_flame h4{
 	padding-left: 5px;
@@ -268,7 +282,7 @@ h2.page-title{
 	padding-left: 5px;
 }
 .author{
-/*	border: 2px solid blue;*/
+	/*	border: 2px solid blue;*/
 	padding-left: 5px;
 }
 .author h4{
@@ -279,8 +293,8 @@ h2.page-title{
 .post_content{
 	padding-left: 5px;
 	display:block;
-	border: 2px solid blue;
-	
+/* 	border: 2px solid blue; */
+
 }
 .post_content p{
 	display: block;
@@ -293,7 +307,7 @@ h2.page-title{
 /* COMMENTTS  */
 .comments{
 	padding:5px;
-	border:2px solid green;
+	border:1px solid white;
 }
 .comments p{
 	margin:0;
@@ -309,7 +323,7 @@ h2.page-title{
 #comment{
 	/* this is the text area */
 	max-width: 318px;
-	border:2px solid red;
+/* 	border:2px solid red; */
 	margin-left:3px;
 }
 .form-submit{}
@@ -371,33 +385,33 @@ h2.page-title{
 	margin-left: 20px;
 }
 .widget ul li{
-/* 	list-style:disc; */
+	/* 	list-style:disc; */
 }
 
 .widget_media_gallery{
-/* see indipendent style below  immediately below */
-	}
-	#gallery-1 {
-		margin: auto;
-	}
-	#gallery-1 .gallery-item {
-		float: left;
-		margin-top: 10px;
-		text-align: center;
-		width: 33%;
-	}
-	#gallery-1 img {
-		border: 2px solid #cfcfcf;
-		max-width: 80px;
-		height: auto;
-	}
-	#gallery-1 .gallery-caption {
-		margin-left: 2px;
-		text-align:left;
-		font-weight:normal;
-	}
+	/* see indipendent style below  immediately below */
+}
+#gallery-1 {
+	margin: auto;
+}
+#gallery-1 .gallery-item {
+	float: left;
+	margin-top: 10px;
+	text-align: center;
+	width: 33%;
+}
+#gallery-1 img {
+	border: 2px solid #cfcfcf;
+	max-width: 80px;
+	height: auto;
+}
+#gallery-1 .gallery-caption {
+	margin-left: 2px;
+	text-align:left;
+	font-weight:normal;
+}
 
-	/* see gallery_shortcode() in wp-includes/media.php */
+/* see gallery_shortcode() in wp-includes/media.php */
 /* widget_media_gallery */
 
 /* end sidebar */
@@ -423,23 +437,21 @@ h2.page-title{
 	padding-left: 5px;
 }
 
-#footer{
-
-}
-.footer{
-	height: 100px;
+#footer.footer{
+	/* 	height: 100px; */
 	width: 100%;
 	bottom: 0;
 	position: absolute;
+	padding-top: 5px;
 	padding-bottom: 5px;
-	border:2px solid blue;
+/* 	border:2px solid blue; */
 	background-color:#768676;
 	display: flex;
 	justify-content: center;
 }
 .footer_box{
 	border-left: 1px solid white;
-	padding: 16px;
+	padding: 10px; 
 	max-width: 175px;
 }
 
@@ -455,32 +467,46 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 .alignleft {float:left; }
 .aligncenter {display: block; margin-left: auto; margin-right: auto}
 
-
 @media only screen and (max-width: 414px) {
-/* Apple iPhone 6+, 6s+, 7+, 8+, XR, XSMax   width =414px */
-	html,body{
-		max-width: 414px;
-		font-size:20px;
+	/* Sumsang Galaxy s7 and up  anything below 360px */
+	/* Also LG3, LG4, LG5, LG Nexus 5, */ 
+	body{
+		max-width: 414px;	
 	}
 	div,ul,li {
 		max-width: 414px;
 	}
+	h2{
+		font-size:6.2vw;
+		color:green;
+	}
 	#main_container{
 		display:block;
-		background-color:yellow;
+/* 		background-color:yellow; */
 		margin:auto;
 		padding-bottom: 400px; /* change this with change in footer content */
 	}
-	#header {
+	#header.header{
 		display:block;
-		padding: 5px 5px 5px 10px;
+		padding: 5px 5px 5px 10px; 
+	}
+	.headerimage h1{
+		font-size:8vw;
+	}
+	.header_description{
 	}
 	.header_description h2{
-		font-size:larger;
+		font-size:5.5vw;
 	}
-
+	h3{
+		font-size:4.2vw;	
+	}
+	h4{
+		font-size:4vw;	
+	}
 	/* hand held header nav */
-	#header_nav{
+	#header_nav.header_nav{
+		margin-top:5px;
 	}
 	#header_nav span{
 		display:inline-block;
@@ -489,7 +515,7 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 		padding: 3px;
 	}
 	.menu-header-container{
-		/* 	border: 2px solid blue; */
+		/*border: 2px solid blue; */
 		display: inline-block;	
 		visibility: hidden;
 		position: absolute;
@@ -514,7 +540,12 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 		display: block;
 		width: 100%;
 	}
-	
+	.page-title{
+		/* 		font-size:6vw;
+		color:green;  */
+	}
+
+
 	/* latest post */
 	.latest_post h2{}
 	img{
@@ -524,8 +555,8 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 	.caption{
 		padding-left:3px;
 	}
-		.latest_post_excerpt{
-		max-width:412px;
+	.latest_post_excerpt{
+		max-width:358px;
 	}
 
 	/* single post */
@@ -537,14 +568,157 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 		height:auto;
 	}
 	.post_content img{
-	/* image inserted directly into the post text */
-	max-width: 180px;
+		/* image inserted directly into the post text */
+		max-width: 180px;
 	}
 	#comment{
-	/* this is the text area */
-	max-width: 318px;
-	border:2px solid red;
-	margin-left:3px;
+		/* this is the text area */
+		max-width: 318px;
+/* 		border:2px solid red; */
+		margin-left:3px;
+	}
+	/*  right column */
+	.right_column{
+		float: none;
+		width:100%;
+			border: 1px solid white;
+	}
+	.widget_search{
+	}
+	#s{
+		width:125px;
+	}
+
+	/* disable verticle add  */
+	.verticle_add{
+		/*		visibility:hidden;
+		width:0;
+		height:0;*/
+		display: none;
+	}
+	#footer.footer{
+		height:350px; /* change this with change in footer content */
+		display: block;
+		width: 100%;
+	}
+	.footer_box{
+		border: 1px solid white;
+		/* 	padding: 16px; */
+		max-width: 100%;
+		margin:10px;
+		padding:0;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	/* Sumsang Galaxy s7 and up  anything below 360px */
+	/* Also LG3, LG4, LG5, LG Nexus 5, */ 
+	body{
+		max-width: 375px;	
+	}
+	div,ul,li {
+		max-width: 375px;
+	}
+	h2{
+		font-size:6.2vw;
+/* 		color:red; */
+	}
+	#main_container{
+		display:block;
+/* 		background-color:green; */
+		margin:auto;
+		padding-bottom: 400px; /* change this with change in footer content */
+	}
+	#header.header{
+		display:block;
+		padding: 5px 5px 5px 10px; 
+	}
+	.headerimage h1{
+		font-size:8vw;
+	}
+	.header_description{
+	}
+	.header_description h2{
+		font-size:5.5vw;
+	}
+	h3{
+		font-size:4.2vw;	
+	}
+	h4{
+		font-size:4vw;	
+	}
+	/* hand held header nav */
+	#header_nav.header_nav{
+		margin-top:5px;
+	}
+	#header_nav span{
+		display:inline-block;
+		background-color: white;
+		border-radius: 40px;
+		padding: 3px;
+	}
+	.menu-header-container{
+		/*border: 2px solid blue; */
+		display: inline-block;	
+		visibility: hidden;
+		position: absolute;
+		z-index: 1;
+	}
+	#menu-header.menu{
+		list-style: none;
+	}
+	#menu-header.menu li{
+		display:block;
+		border-left:3px solid black;
+		padding: 3px;
+	}
+	#menu-header.menu li a{
+		font-weight: bold;
+	}
+	#header_nav:hover .menu-header-container{
+		visibility:visible;
+	}
+
+	.left_column{
+		display: block;
+		width: 100%;
+	}
+	.page-title{
+		/* 		font-size:6vw;
+		color:green;  */
+	}
+
+
+	/* latest post */
+	.latest_post h2{}
+	img{
+		max-width:370px;
+		height:auto;
+	}
+	.caption{
+		padding-left:3px;
+	}
+	.latest_post_excerpt{
+		max-width:358px;
+	}
+
+	/* single post */
+	.picha_single_flame{
+		max-width: 373px;
+	}
+	.picha_single_flame img{
+		max-width:373px;
+		height:auto;
+	}
+	.post_content img{
+		/* image inserted directly into the post text */
+		max-width: 180px;
+	}
+	#comment{
+		/* this is the text area */
+		max-width: 318px;
+	/*border:2px solid red; */
+		margin-left:3px;
 	}
 	/*  right column */
 	.right_column{
@@ -556,183 +730,63 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 	#s{
 		width:125px;
 	}
+
 	/* disable verticle add  */
 	.verticle_add{
-		display: none;
-	
-	}
-		#footer{
-
-	}
-	.footer{
-		height:400px; /* change this with change in footer content */
-		display: block;
-		width: 100%;
-	}
-
-	.footer_box{
-		border: 1px solid white;
-		/* 	padding: 16px; */
-		max-width: 100%;
-		margin:10px;
-		padding:0;
-	}
-}
-
-
-
-@media only screen and (max-width:375px){
-	/* Apple iPhone 6, 6S, 7, 8, X  width= 375px   */
-	html,body{
-		max-width: 375px;
-		font-size:22px;
-	}
-	div,ul,li {
-		max-width: 375px;
-	}
-	#main_container{
-		display:block;
-		 background-color:green; 
-		margin:auto;
-		padding-bottom: 400px; /* change this with change in footer content */
-	}
-
-	#header {
-		padding: 5px 5px 5px 10px;
-	}
-	.header_description h2{
-		font-size:larger;
-	}
-	
-	/* hand held header nav */
-	#header_nav{
-	}
-	#header_nav span{
-		display:inline-block;
-		background-color: white;
-		border-radius: 40px;
-		padding: 3px;
-	}
-	.menu-header-container{
-		/* 	border: 2px solid blue; */
-		display: inline-block;	
-		visibility: hidden;
-		position: absolute;
-		z-index: 1;
-	}
-	#menu-header.menu{
-		list-style: none;
-	}
-	#menu-header.menu li{
-		display:block;
-		border-left:3px solid black;
-		padding: 3px;
-	}
-	#menu-header.menu li a{
-		font-weight: bold;
-	}
-	#header_nav:hover .menu-header-container{
-		visibility:visible;
-	}
-	.left_column{
-		display: block;
-		width: 100%;
-	}
-
-	/*latest Post */
-	.latest_post h2{}
-
-	img{
-		/* max body -4px */
-		max-width:370px;
-		height:auto
-	}
-	.caption{
-		padding-left: 3px;
-	}
-	.latest_post_excerpt{
-		max-width:370px;
-	}
-
-	/* single post */
-	.picha_single_flame{
-		/* max body -2px */
-		max-width: 373px;
-	}
-		.picha_single_flame img{
-		/* max body -2px */
-		max-width: 373px;
-	}
-	.post_content img{
-	/* image inserted directly into the post text */
-	max-width: 180px;
-	}
-
-	#comment{
-		/* this is the text area */
-		max-width: 370px;
-		border:2px solid red;
-		margin-left:3px;
-	}
-	/*  right column */
-	.right_column{
-		float: none;
-		width:100%;
-	}
-		.widget_search{
-	}
-	#s{
-		width:125px;
-	}
-	/* disable verticle add  */
-	.verticle_add{
-		visibility:hidden;
+		/*		visibility:hidden;
 		width:0;
-		height:0;
+		height:0;*/
+		display: none;
 	}
-	#footer{
-	
-	}
-	.footer{
-		height:400px; /* change this with change in footer content */
-		display: block;
-		width: 100%;
+	#footer.footer{	
+		height:350px;
 	}
 	.footer_box{
-		border: 1px solid white;
-		/* 	padding: 16px; */
-		max-width: 100%;
-		margin:10px;
-		padding:0;
 	}
 }
 
 @media only screen and (max-width: 360px) {
 	/* Sumsang Galaxy s7 and up  anything below 360px */
 	/* Also LG3, LG4, LG5, LG Nexus 5, */ 
-	html,body{
+	body{
 		max-width: 360px;
-		font-size:20px;
+		background-color: pink;
+
 	}
 	div,ul,li {
 		max-width: 360px;
 	}
+	h2{
+		font-size:6vw;
+		color:green;
+	}
 	#main_container{
 		display:block;
-		background-color:pink;
+/* background-color:pink; */
 		margin:auto;
 		padding-bottom: 400px; /* change this with change in footer content */
 	}
-	#header {
+	#header.header{
 		display:block;
-		padding: 5px 5px 5px 10px;
+		padding: 5px 5px 5px 10px; 
+	}
+	.headerimage h1{
+		font-size:8vw;
+	}
+	.header_description{
 	}
 	.header_description h2{
-		font-size:larger;
+		font-size:5vw;
 	}
-
+	h3{
+		font-size:4.2vw;	
+	}
+	h4{
+		font-size:4vw;	
+	}
 	/* hand held header nav */
-	#header_nav{
+	#header_nav.header_nav{
+		margin-top:5px;
 	}
 	#header_nav span{
 		display:inline-block;
@@ -741,7 +795,7 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 		padding: 3px;
 	}
 	.menu-header-container{
-		/* 	border: 2px solid blue; */
+		/*border: 2px solid blue; */
 		display: inline-block;	
 		visibility: hidden;
 		position: absolute;
@@ -766,9 +820,16 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 		display: block;
 		width: 100%;
 	}
-	
+	.page-title{
+		font-size:5.3vw;
+	}
+
+
 	/* latest post */
-	.latest_post h2{}
+	.latest_post h2{
+		font-size:5.3vw;
+
+	}
 	img{
 		max-width:356px;
 		height:auto;
@@ -776,7 +837,7 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 	.caption{
 		padding-left:3px;
 	}
-		.latest_post_excerpt{
+	.latest_post_excerpt{
 		max-width:358px;
 	}
 
@@ -789,14 +850,14 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 		height:auto;
 	}
 	.post_content img{
-	/* image inserted directly into the post text */
-	max-width: 180px;
+		/* image inserted directly into the post text */
+		max-width: 180px;
 	}
 	#comment{
-	/* this is the text area */
-	max-width: 318px;
-	border:2px solid red;
-	margin-left:3px;
+		/* this is the text area */
+		max-width: 318px;
+/* 		border:2px solid red; */
+		margin-left:3px;
 	}
 	/*  right column */
 	.right_column{
@@ -808,7 +869,7 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 	#s{
 		width:125px;
 	}
-	
+
 	/* disable verticle add  */
 	.verticle_add{
 		/*		visibility:hidden;
@@ -816,19 +877,13 @@ img.aligncenter {display: block; margin-left: auto; margin-right: auto}
 		height:0;*/
 		display: none;
 	}
-	#footer{
-	
-	}
-	.footer{
-		height:400px; /* change this with change in footer content */
+
+	#footer.footer{
+		height:350px; /* change this with change in footer content */
 		display: block;
 		width: 100%;
+
 	}
-	.footer_box{
-		border: 1px solid white;
-		/* 	padding: 16px; */
-		max-width: 100%;
-		margin:10px;
-		padding:0;
+	.footer_box{	
 	}
 }

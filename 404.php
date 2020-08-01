@@ -10,6 +10,7 @@
 **/
 
 get_header(); ?>
+<div class="notice"> <?php global $template; echo basename($template); ?> </div> 
 
 	<div id="primary" class="content-area">
 		<div id="content" class="site-content" role="main">

@@ -1,4 +1,4 @@
-<?php
+	<?php
 /**
 *Template name: footer
 * Description: powers the footer section
@@ -11,6 +11,7 @@
 * 
 **/
 ?>
+
 		</div><!--content  see header -->
             <div id="footer" class="footer">
             	<div class='footer_box'>

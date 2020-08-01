@@ -12,9 +12,10 @@
 
  get_header();
 ?>
+<div class="notice"> <?php global $template; echo basename($template); ?> </div> 
 
 <div id="below_header">
-	<!-- <div class ="notice"> <p> This is template HOME.PHP </p> </div> -->
+
 	<!-- google add-->
 	<?php get_template_part('template-parts/adds/google_horizontal'); ?> 
 	<?php get_search_form(); ?>
@@ -33,11 +34,10 @@
 
 	</div>
 
-
 	<div class="right_column">
 		<div id="flyers">
 			<!-- <p> some commercial goes here </p> -->
-			<?php get_template_part('template-parts/adds/flyers'); ?>
+			<?php get_template_part('template-parts/adds/flyers'); ?> 
 		</div>
 
 		<div id="below_flyer">
@@ -46,6 +46,6 @@
 		</div>
 	</div><!--right_column -->
 	<div style="clear:both"></div>	
+</div><!-- columns -->
 
-</div><!--content  see header -->
 <?php get_footer(); ?>

@@ -7,7 +7,7 @@
 
  get_header();
 ?>
-<div class ="notice"> <p> This is template index.php </p> </div>
+<div class="notice"> <?php global $template; echo basename($template); ?> </div> 
 
 	<div>  <?php get_search_form(); ?> </div>
 <?php 
@@ -25,5 +25,5 @@ if ( have_posts() ) {
 ?>
 
 
-</div><!--content -->
+
 <?php get_footer(); ?>

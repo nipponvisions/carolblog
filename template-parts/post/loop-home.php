@@ -19,7 +19,7 @@
 				<?php
 				}
 				else{
-					?> <img  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/thumb_pedding.png" alt="thumb_pedding"><?php 
+					?> <img  src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/thumb_pedding.png" alt="thumb_pedding"><?php 
 				}
 				?>	
 				<!-- story title -->

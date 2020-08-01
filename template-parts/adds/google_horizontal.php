@@ -12,5 +12,5 @@
 
 ?>
 	<div class="horizontal_add"> 
-		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/728x90_horizontal.png" alt="728x90"> 
+		<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/adds/728x90_horizontal.png" alt="728x90"> 
 	</div> 

@@ -28,7 +28,15 @@
                 /*  background: url("<?php bloginfo('stylesheet_directory'); ?>/assets/images/african_shop_header_img.jpg");    */
                 background-image: url('<?php header_image(); ?>');
                 background-repeat: no-repeat;
+                margin: 0;
+                padding: 0;
             }
+			.logo{
+			/*	border:1px solid blue;*/
+				float:left;
+                padding: 5px;
+			}
+      
         </style>
       
         <?php wp_head(); ?>     
@@ -40,6 +48,9 @@
         <div id="main_container"> 
 
             <div id="header" class="header">
+				<div class="logo">
+                    <img  width="50px" height="auto" src="<?php bloginfo('stylesheet_directory'); ?>/logo.png"> 
+            	</div>
 
                 <div id="headerimage" class="headerimage">
                     <h1> <a href="<?php bloginfo('url');?>"> <?php bloginfo('name');?> </a> </h1> 
@@ -49,11 +60,12 @@
                     </div><!-- header_description -->
             </div><!-- headerimage --> 
 
-              <div id="header_nav">
-                <span> Menu </span>
-				<?php wp_nav_menu('header');  ?>
-			</div>
+              <div id="header_nav" class="header_nav">
+				  	<!-- span used by hand held devices -->
+				    <span> Menu </span>
+					<?php wp_nav_menu('header');  ?>
+					</div>
 
             </div><!--header -->
 
-        	<div id ="content">
+        	<div id ="content" class="content">
