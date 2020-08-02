@@ -12,9 +12,11 @@
 	<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<ul>
 				<li>
-					
-					<!-- Display post content -->
-					<a href="<?php the_permalink(); ?>"> <?php the_title('<h3 class="post-title">','</h3>'); ?></a>     
+					<!-- the title--> 
+					<a href="<?php the_permalink(); ?>"> <?php the_title('<h3 class="post-title">','</h3>'); ?></a> 
+					<!--author and publication date --> 
+					<span class ="by_line"> Written by: <?php echo get_the_author(); ?></span>
+					<span class ="posting_date"> Posted on: <?php echo get_the_date(); ?> </spa> 
 					<?php the_excerpt(); ?>
 				</li>
 			</ul> 

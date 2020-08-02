@@ -2,7 +2,7 @@
 /**
 * Template name: archive
 * Description : The main arichive file - a page that displays a list of posts  without thumbnails 
-* * @link https://developer.wordpress.org/themes/template-files-section/taxonomy-templates/
+* @link https://developer.wordpress.org/themes/template-files-section/taxonomy-templates/
 * @package WordPress
 * @subpackage carolblog
 * @since 
@@ -16,17 +16,16 @@ get_header();
 	<!-- google add-->
 	<?php get_template_part('template-parts/adds/google_horizontal'); ?> 
 
-	<div>  <?php get_search_form(); ?> </div> 
+	  <div> <?php get_search_form(); ?></div>
 </div><!--below_header-->
 
 <div id="columns">
 	<div class="left_column">
-		<?php
-		the_archive_title('<h2 class="page-title">', '</h2>'); 
-		the_archive_description( '<div class="taxonomy-description">', '</div>' );
-		
+		<?php the_archive_title('<h2 class="page-title">', '</h2>'); 
+		// the_archive_description( '<div class="taxonomy-description">', '</div>' );
+
 		/* archives loop  start */
-		get_template_part('template-parts/post/loop','archive'); ?>
+		 get_template_part('template-parts/post/loop','archive'); ?>
 	</div>
 
 	<div class="right_column">

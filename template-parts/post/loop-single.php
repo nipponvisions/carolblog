@@ -29,7 +29,10 @@
 			<!--  display featured image description field content -->
 			<?php //echo get_post(get_post_thumbnail_id())->post_content; ?>
 			<!-- the post body content -->
-			<div class="post_content"> 
+			<div class="post_content">
+
+				<span class ="by_line"> Written by: <?php echo get_the_author(); ?></span>
+				<span class ="posting_date"> Posted on: <?php echo get_the_date(); ?> </span>
 				<?php the_content(); ?>
 			</div><!--post_content -->
 

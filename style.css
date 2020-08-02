@@ -253,6 +253,7 @@ p{
 .verticle_add{
 	/*	float: right;*/
 	max-width: 92px;
+	margin-left: 10px;
 }
 
 /* posts SINGLE.PHP */ 
